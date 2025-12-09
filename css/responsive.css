@@ -1,0 +1,382 @@
+/* ===========================================================
+   RESPONSIVE.CSS - Diseño Adaptable Mobile-First
+   =========================================================== */
+
+/* ===========================================================
+   MOBILE BASE (< 640px)
+   =========================================================== */
+
+/* Navigation Mobile */
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background: var(--bg-primary);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    z-index: 999;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.menu-toggle {
+    display: flex;
+}
+
+/* Hero Mobile */
+.hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-2xl);
+    padding: var(--spacing-xl) 0;
+}
+
+.hero-visual {
+    order: -1;
+}
+
+.hero-card {
+    max-width: 100%;
+}
+
+.hero-tagline {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-location {
+    justify-content: center;
+}
+
+.hero-cta {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-links {
+    justify-content: center;
+}
+
+.scroll-indicator {
+    display: none;
+}
+
+/* Tech Stack Mobile */
+.tech-grid {
+    justify-content: center;
+}
+
+.tech-item {
+    flex: 1 1 calc(33.333% - var(--spacing-md));
+    min-width: 90px;
+    padding: var(--spacing-md);
+}
+
+.tech-item i {
+    font-size: 2rem;
+}
+
+.tech-item span {
+    font-size: 0.75rem;
+}
+
+/* Projects Mobile */
+.project-card {
+    padding: var(--spacing-lg);
+}
+
+.project-tech {
+    justify-content: flex-start;
+}
+
+.tech-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.showcase-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.showcase-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Project Demos Mobile */
+.demo-lab-onc,
+.demo-odontoline,
+.demo-poke-dnd {
+    max-width: 100%;
+}
+
+/* Timeline Mobile */
+.timeline {
+    padding-left: 20px;
+}
+
+.timeline-marker {
+    left: -24px;
+    width: 8px;
+    height: 8px;
+}
+
+.timeline-content {
+    padding: var(--spacing-lg);
+}
+
+/* Education Mobile */
+.education-grid {
+    grid-template-columns: 1fr;
+}
+
+.education-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/* Contact Mobile */
+.contact-methods {
+    grid-template-columns: 1fr;
+}
+
+.contact-card {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Cookie Banner Mobile */
+.cookie-content {
+    flex-direction: column;
+    text-align: center;
+}
+
+.cookie-buttons {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ===========================================================
+   TABLET (640px - 1024px)
+   =========================================================== */
+@media (min-width: 640px) {
+    /* Hero Tablet */
+    .hero-content {
+        text-align: left;
+    }
+    
+    .hero-visual {
+        order: 0;
+    }
+    
+    .hero-tagline {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .hero-location {
+        justify-content: flex-start;
+    }
+    
+    .hero-cta {
+        justify-content: flex-start;
+    }
+    
+    .hero-links {
+        justify-content: flex-start;
+    }
+    
+    /* Tech Stack Tablet */
+    .tech-item {
+        flex: 0 0 auto;
+        min-width: 100px;
+        padding: var(--spacing-lg);
+    }
+    
+    .tech-item i {
+        font-size: 2.5rem;
+    }
+    
+    .tech-item span {
+        font-size: 0.85rem;
+    }
+    
+    /* Education Tablet */
+    .education-card {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    /* Contact Tablet */
+    .contact-card {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    /* Cookie Banner Tablet */
+    .cookie-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .cookie-buttons {
+        width: auto;
+    }
+}
+
+/* ===========================================================
+   DESKTOP (> 1024px)
+   =========================================================== */
+@media (min-width: 1024px) {
+    /* Navigation Desktop */
+    .nav-menu {
+        display: flex;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        flex-direction: row;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    /* Hero Desktop */
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-3xl);
+    }
+    
+    .scroll-indicator {
+        display: flex;
+    }
+    
+    /* Projects Desktop - Features Grid */
+    .project-features ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Demos Desktop - Better sizing */
+    .demo-lab-onc {
+        height: 500px;
+    }
+    
+    .demo-odontoline {
+        height: 600px;
+    }
+    
+    .demo-poke-dnd {
+        height: 550px;
+    }
+}
+
+/* ===========================================================
+   LARGE DESKTOP (> 1280px)
+   =========================================================== */
+@media (min-width: 1280px) {
+    :root {
+        --container-max: 1280px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .section {
+        padding: var(--spacing-3xl) 0;
+    }
+}
+
+/* ===========================================================
+   PRINT STYLES
+   =========================================================== */
+@media print {
+    .header,
+    .bg-animation,
+    .cookie-banner,
+    .scroll-indicator,
+    .hero-cta,
+    .showcase-tabs,
+    .tab-content,
+    .video-container {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===========================================================
+   REDUCED MOTION
+   =========================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ===========================================================
+   HIGH CONTRAST MODE
+   =========================================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --border-primary: currentColor;
+    }
+    
+    .btn-outline {
+        border-width: 3px;
+    }
+    
+    .nav-link::after {
+        height: 3px;
+    }
+}
+
+/* ===========================================================
+   LANDSCAPE MOBILE
+   =========================================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + var(--spacing-xl));
+        padding-bottom: var(--spacing-xl);
+    }
+    
+    .hero-content {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}

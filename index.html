@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Víctor Maldonado García - Ingeniero en Computación y Full Stack Developer. Desarrollo web, móvil y de escritorio.">
+    <meta name="keywords" content="Full Stack Developer, Ingeniero Computación, React, TypeScript, Python, Node.js">
+    <meta name="author" content="Víctor Maldonado García">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://victormg.dev/">
+    <meta property="og:title" content="Víctor Maldonado García - Full Stack Developer">
+    <meta property="og:description" content="Ingeniero en Computación especializado en desarrollo web, móvil y de escritorio.">
+    <meta property="og:image" content="images/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Víctor Maldonado García - Full Stack Developer">
+    <meta name="twitter:description" content="Ingeniero en Computación especializado en desarrollo web, móvil y de escritorio.">
+    
+    <title>Víctor Maldonado García | Full Stack Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- DevIcon for Tech Stack -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/projects.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner" hidden>
+        <div class="cookie-content">
+            <p data-i18n="cookies.message">Este sitio utiliza cookies para recordar tus preferencias de tema e idioma.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-primary btn-sm" data-i18n="cookies.accept">Aceptar</button>
+                <button id="rejectCookies" class="btn btn-outline btn-sm" data-i18n="cookies.reject">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="bg-particles" id="particles"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">VMG</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre Mí</a></li>
+                <li><a href="#tech" class="nav-link" data-i18n="nav.tech">Tecnologías</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a></li>
+                <li><a href="#education" class="nav-link" data-i18n="nav.education">Educación</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <!-- Language Toggle -->
+                <button id="langToggle" class="toggle-btn" aria-label="Cambiar idioma">
+                    <span class="lang-indicator">ES</span>
+                </button>
+                
+                <!-- Theme Toggle -->
+                <button id="themeToggle" class="toggle-btn" aria-label="Cambiar tema">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="menuToggle" class="menu-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <span class="hero-greeting" data-i18n="hero.greeting">Hola, soy</span>
+                    <h1 class="hero-title">Víctor Maldonado García</h1>
+                    <h2 class="hero-subtitle" data-i18n="hero.subtitle">Ingeniero en Computación</h2>
+                    <p class="hero-tagline" data-i18n="hero.tagline">Full Stack Developer especializado en crear soluciones tecnológicas eficientes y bien construidas.</p>
+                    <p class="hero-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        La Serena, Chile
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Ver Proyectos</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="hero.cta.contact">Contactar</a>
+                    </div>
+                    <div class="hero-links">
+                        <a href="http://www.linkedin.com/in/victormg-dev" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:vmaldonadog97@gmail.com" class="social-link" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-card">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Víctor Maldonado"</span>,
+  <span class="property">role</span>: <span class="string">"Full Stack Developer"</span>,
+  <span class="property">skills</span>: [<span class="string">"React"</span>, <span class="string">"Node.js"</span>, <span class="string">"Python"</span>],
+  <span class="property">passion</span>: <span class="string">"Crear soluciones útiles"</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span data-i18n="hero.scroll">Scroll</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="about.title">Sobre Mí</h2>
+                <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+                    <p data-i18n="about.p1">Soy Víctor Patricio Maldonado García, Ingeniero en Computación titulado de la Universidad de La Serena. Me dedico al desarrollo de software, con experiencia en la creación de aplicaciones web, móviles y de escritorio.</p>
+                    <p data-i18n="about.p2">Me interesa diseñar soluciones tecnológicas que sean útiles, eficientes y bien construidas, siempre buscando mejorar tanto el producto como el proceso detrás de él. Disfruto aprender nuevas herramientas y lenguajes, especialmente en áreas como desarrollo full stack, bases de datos y automatización.</p>
+                    <p data-i18n="about.p3">Me considero una persona responsable, curiosa y con buen criterio técnico, que valora el trabajo en equipo y la comunicación clara. Mi objetivo es seguir creciendo como desarrollador, participando en proyectos que representen desafíos reales y aporten valor a las personas que los usan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="section tech">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="tech.title">Stack Tecnológico</h2>
+                
+                <div class="tech-categories">
+                    <!-- Frontend -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="tech-category-title" data-i18n="tech.frontend">Frontend</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item" title="React">
+                                <i class="devicon-react-original colored"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item" title="React Native">
+                                <i class="devicon-react-original colored"></i>
+                                <span>React Native</span>
+                            </div>
+                            <div class="tech-item" title="TypeScript">
+                                <i class="devicon-typescript-plain colored"></i>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="tech-item" title="JavaScript">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item" title="HTML5">
+                                <i class="devicon-html5-plain colored"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item" title="CSS3">
+                                <i class="devicon-css3-plain colored"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item" title="Tailwind CSS">
+                                <i class="devicon-tailwindcss-original colored"></i>
+                                <span>Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="tech-category-title" data-i18n="tech.backend">Backend</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item" title="Node.js">
+                                <i class="devicon-nodejs-plain colored"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-item" title="Python">
+                                <i class="devicon-python-plain colored"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-item" title="Flask">
+                                <i class="devicon-flask-original"></i>
+                                <span>Flask</span>
+                            </div>
+                            <div class="tech-item" title="Rust">
+                                <i class="devicon-rust-original"></i>
+                                <span>Rust</span>
+                            </div>
+                            <div class="tech-item" title="Express.js">
+                                <i class="devicon-express-original"></i>
+                                <span>Express</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Databases -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="tech-category-title" data-i18n="tech.databases">Bases de Datos</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item" title="PostgreSQL">
+                                <i class="devicon-postgresql-plain colored"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="tech-item" title="MySQL">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-item" title="SQLite">
+                                <i class="devicon-sqlite-plain colored"></i>
+                                <span>SQLite</span>
+                            </div>
+                            <div class="tech-item" title="Supabase">
+                                <i class="devicon-supabase-plain colored"></i>
+                                <span>Supabase</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="tech-category-title" data-i18n="tech.tools">Herramientas</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item" title="Git">
+                                <i class="devicon-git-plain colored"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="tech-item" title="Docker">
+                                <i class="devicon-docker-plain colored"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="tech-item" title="Prisma">
+                                <i class="devicon-prisma-original"></i>
+                                <span>Prisma</span>
+                            </div>
+                            <div class="tech-item" title="Tauri">
+                                <i class="devicon-tauri-plain colored"></i>
+                                <span>Tauri</span>
+                            </div>
+                            <div class="tech-item" title="Vite">
+                                <i class="devicon-vitejs-plain colored"></i>
+                                <span>Vite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="projects.title">Proyectos Destacados</h2>
+                
+                <!-- Project 1: Lab ONC -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="project-type">Desktop App</span>
+                            <h3 class="project-title" data-i18n="projects.labonc.title">Sistema de Gestión Laboratorio Dental ONC</h3>
+                            <p class="project-description" data-i18n="projects.labonc.description">Aplicación de escritorio robusta para la gestión integral de un laboratorio dental. Reemplaza un sistema legado (MS Access 2003) por una solución moderna, segura y eficiente.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge"><i class="devicon-tauri-plain"></i> Tauri v2</span>
+                            <span class="tech-badge"><i class="devicon-react-original"></i> React 18</span>
+                            <span class="tech-badge"><i class="devicon-typescript-plain"></i> TypeScript</span>
+                            <span class="tech-badge"><i class="devicon-rust-original"></i> Rust</span>
+                            <span class="tech-badge"><i class="devicon-sqlite-plain"></i> SQLite</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-features">
+                        <h4 data-i18n="projects.features">Características Técnicas</h4>
+                        <ul>
+                            <li data-i18n="projects.labonc.f1">Sistema de migración híbrido compatible con Access y formatos modernos</li>
+                            <li data-i18n="projects.labonc.f2">Rust para operaciones de sistema + SQLite con modo WAL</li>
+                            <li data-i18n="projects.labonc.f3">UX adaptativa con saludos dinámicos según hora del día</li>
+                            <li data-i18n="projects.labonc.f4">Generación de PDFs optimizada (50-200KB vs 15MB legacy)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-showcase">
+                        <div class="showcase-tabs">
+                            <button class="tab-btn active" data-tab="demo-labonc" data-i18n="projects.tab.demo">Demo Interactiva</button>
+                            <button class="tab-btn" data-tab="video-labonc" data-i18n="projects.tab.video">Video</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="demo-labonc">
+                            <!-- Lab ONC Demo -->
+                            <div class="demo-lab-onc">
+                                <header class="lab-header">
+                                    <div class="lab-brand">
+                                        <div class="lab-logo-circle">🦷</div>
+                                        <div class="lab-title">
+                                            <h1>Laboratorio ONC</h1>
+                                            <small>Sistema de Gestión</small>
+                                        </div>
+                                    </div>
+                                    <div class="lab-info">
+                                        <div>Admin</div>
+                                        <small>Lun, 9 Dic 2025</small>
+                                    </div>
+                                </header>
+                                <main class="lab-content">
+                                    <h2 class="lab-section-title">Módulos Principales</h2>
+                                    <div class="lab-grid">
+                                        <div class="lab-card">
+                                            <span class="lab-icon">📋</span>
+                                            <h3>Órdenes</h3>
+                                            <p>Gestión de trabajos y seguimiento</p>
+                                        </div>
+                                        <div class="lab-card">
+                                            <span class="lab-icon">👥</span>
+                                            <h3>Clientes</h3>
+                                            <p>Base de datos de clínicas</p>
+                                        </div>
+                                        <div class="lab-card">
+                                            <span class="lab-icon">📊</span>
+                                            <h3>Reportes</h3>
+                                            <p>Estadísticas y análisis</p>
+                                        </div>
+                                        <div class="lab-card">
+                                            <span class="lab-icon">⚙️</span>
+                                            <h3>Configuración</h3>
+                                            <p>Ajustes del sistema</p>
+                                        </div>
+                                    </div>
+                                </main>
+                                <footer class="lab-footer">
+                                    <span>© 2025 Lab ONC - Sistema de Gestión v2.0</span>
+                                </footer>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="video-labonc">
+                            <div class="video-container">
+                                <video controls preload="metadata" poster="images/poster-labonc.jpg">
+                                    <source src="videos/lab-onc/demo.mp4" type="video/mp4">
+                                    <p data-i18n="projects.video.fallback">Tu navegador no soporta video HTML5.</p>
+                                </video>
+                                <div class="video-placeholder">
+                                    <span class="placeholder-icon">🎬</span>
+                                    <p data-i18n="projects.video.placeholder">Video de demostración próximamente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Odontoline -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="project-type">Mobile App</span>
+                            <h3 class="project-title" data-i18n="projects.odontoline.title">Odontoline App</h3>
+                            <p class="project-description" data-i18n="projects.odontoline.description">Aplicación móvil multiplataforma para pacientes de clínica dental. Gestión de citas, promociones personalizadas y notificaciones push en tiempo real.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge"><i class="devicon-react-original"></i> React Native</span>
+                            <span class="tech-badge"><i class="devicon-typescript-plain"></i> TypeScript</span>
+                            <span class="tech-badge"><i class="devicon-python-plain"></i> Flask</span>
+                            <span class="tech-badge"><i class="devicon-supabase-plain"></i> Supabase</span>
+                            <span class="tech-badge"><i class="devicon-firebase-plain"></i> Firebase</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-features">
+                        <h4 data-i18n="projects.features">Características Técnicas</h4>
+                        <ul>
+                            <li data-i18n="projects.odontoline.f1">Gestión de citas en tiempo real con React Query</li>
+                            <li data-i18n="projects.odontoline.f2">Notificaciones push con Firebase Cloud Messaging</li>
+                            <li data-i18n="projects.odontoline.f3">Autenticación segura con Supabase Auth</li>
+                            <li data-i18n="projects.odontoline.f4">UI personalizada con gradientes y animaciones</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-showcase">
+                        <div class="showcase-tabs">
+                            <button class="tab-btn active" data-tab="demo-odontoline" data-i18n="projects.tab.demo">Demo Interactiva</button>
+                            <button class="tab-btn" data-tab="video-odontoline" data-i18n="projects.tab.video">Video</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="demo-odontoline">
+                            <!-- Odontoline Demo -->
+                            <div class="demo-odontoline">
+                                <input type="radio" name="odo-view" id="view-login" checked>
+                                <input type="radio" name="odo-view" id="view-agenda">
+                                
+                                <!-- Login View -->
+                                <div class="odo-view odo-login-view">
+                                    <div class="odo-logo-area">
+                                        <span class="odo-logo">🦷</span>
+                                        <span class="odo-brand">Odontoline</span>
+                                    </div>
+                                    <div class="odo-welcome-text">
+                                        <h2>Bienvenido</h2>
+                                        <p>Ingresa para gestionar tus citas</p>
+                                    </div>
+                                    <div class="odo-input-group">
+                                        <label class="odo-input-label">Email</label>
+                                        <input type="text" class="odo-input" placeholder="tu@email.com" disabled>
+                                        <span class="odo-input-icon">📧</span>
+                                    </div>
+                                    <div class="odo-input-group">
+                                        <label class="odo-input-label">Contraseña</label>
+                                        <input type="password" class="odo-input" placeholder="••••••••" disabled>
+                                        <span class="odo-input-icon">🔒</span>
+                                    </div>
+                                    <label for="view-agenda" class="odo-btn">Iniciar Sesión</label>
+                                    <a href="#" class="odo-forgot">¿Olvidaste tu contraseña?</a>
+                                    <div class="odo-login-footer">
+                                        <small>Al continuar, aceptas nuestros<br>Términos y Condiciones</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Agenda View -->
+                                <div class="odo-view odo-agenda-view">
+                                    <header class="odo-header">
+                                        <label for="view-login" class="odo-back">←</label>
+                                        <h2>Mi Agenda</h2>
+                                        <span class="odo-bell">🔔</span>
+                                    </header>
+                                    <main class="odo-content">
+                                        <div class="odo-card">
+                                            <div class="odo-card-title">
+                                                <span>Limpieza Dental</span>
+                                                <span class="odo-card-time">10:30</span>
+                                            </div>
+                                            <p class="odo-card-detail">Dr. Martínez • Sala 3</p>
+                                        </div>
+                                        <div class="odo-card">
+                                            <div class="odo-card-title">
+                                                <span>Control General</span>
+                                                <span class="odo-card-time">15:00</span>
+                                            </div>
+                                            <p class="odo-card-detail">Dra. López • Sala 1</p>
+                                        </div>
+                                        <div class="odo-promo">
+                                            <h3>🎉 ¡Promoción!</h3>
+                                            <p>20% desc. en blanqueamiento</p>
+                                        </div>
+                                    </main>
+                                    <nav class="odo-tab-bar">
+                                        <div class="odo-tab active">
+                                            <span class="odo-icon">📅</span>
+                                            <small>Citas</small>
+                                        </div>
+                                        <div class="odo-tab">
+                                            <span class="odo-icon">🎁</span>
+                                            <small>Ofertas</small>
+                                        </div>
+                                        <div class="odo-tab">
+                                            <span class="odo-icon">👤</span>
+                                            <small>Perfil</small>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="video-odontoline">
+                            <div class="video-container">
+                                <video controls preload="metadata" poster="images/poster-odontoline.jpg">
+                                    <source src="videos/odontoline/demo.mp4" type="video/mp4">
+                                    <p data-i18n="projects.video.fallback">Tu navegador no soporta video HTML5.</p>
+                                </video>
+                                <div class="video-placeholder">
+                                    <span class="placeholder-icon">🎬</span>
+                                    <p data-i18n="projects.video.placeholder">Video de demostración próximamente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Pokémon D&D -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <span class="project-type">Web App</span>
+                            <h3 class="project-title" data-i18n="projects.pokednd.title">Pokémon D&D Companion</h3>
+                            <p class="project-description" data-i18n="projects.pokednd.description">Plataforma web que digitaliza hojas de personaje para campaña de D&D en universo Pokémon. Gestión de entrenadores, inventario, misiones y equipos en tiempo real.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge"><i class="devicon-react-original"></i> React 19</span>
+                            <span class="tech-badge"><i class="devicon-typescript-plain"></i> TypeScript</span>
+                            <span class="tech-badge"><i class="devicon-nodejs-plain"></i> Express</span>
+                            <span class="tech-badge"><i class="devicon-prisma-original"></i> Prisma</span>
+                            <span class="tech-badge"><i class="devicon-docker-plain"></i> Docker</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-features">
+                        <h4 data-i18n="projects.features">Características Técnicas</h4>
+                        <ul>
+                            <li data-i18n="projects.pokednd.f1">Sistema de temas dinámicos (Kanto, Desierto, Noche) vía CSS Variables</li>
+                            <li data-i18n="projects.pokednd.f2">Gestión de estado compleja: Entrenador + 6 Pokémon sincronizados</li>
+                            <li data-i18n="projects.pokednd.f3">Scripts PowerShell para orquestación de contenedores</li>
+                            <li data-i18n="projects.pokednd.f4">Adaptación de mecánicas D&D 5e al contexto Pokémon</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-showcase">
+                        <div class="showcase-tabs">
+                            <button class="tab-btn active" data-tab="demo-pokednd" data-i18n="projects.tab.demo">Demo Interactiva</button>
+                            <button class="tab-btn" data-tab="video-pokednd" data-i18n="projects.tab.video">Video</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="demo-pokednd">
+                            <!-- Pokémon D&D Demo -->
+                            <div class="demo-poke-dnd">
+                                <header class="poke-header">
+                                    <div class="poke-trainer-info">
+                                        <h2>Ash Ketchum</h2>
+                                        <span>Nivel 12 • Entrenador</span>
+                                    </div>
+                                    <div class="poke-currency">
+                                        <span class="poke-coin">🪙</span>
+                                        <span>15,420</span>
+                                    </div>
+                                </header>
+                                <main class="poke-content">
+                                    <h3 class="poke-section-title">🎮 Equipo Pokémon</h3>
+                                    <div class="poke-team-grid">
+                                        <div class="poke-card">
+                                            <div class="poke-avatar">⚡</div>
+                                            <div class="poke-info">
+                                                <span class="poke-name">Pikachu</span>
+                                                <span class="poke-lvl">Nv. 45</span>
+                                            </div>
+                                            <div class="poke-hp-bar"><div class="poke-hp-fill" style="width: 85%;"></div></div>
+                                        </div>
+                                        <div class="poke-card">
+                                            <div class="poke-avatar">🔥</div>
+                                            <div class="poke-info">
+                                                <span class="poke-name">Charizard</span>
+                                                <span class="poke-lvl">Nv. 50</span>
+                                            </div>
+                                            <div class="poke-hp-bar"><div class="poke-hp-fill" style="width: 100%;"></div></div>
+                                        </div>
+                                        <div class="poke-card">
+                                            <div class="poke-avatar">🐢</div>
+                                            <div class="poke-info">
+                                                <span class="poke-name">Blastoise</span>
+                                                <span class="poke-lvl">Nv. 48</span>
+                                            </div>
+                                            <div class="poke-hp-bar"><div class="poke-hp-fill" style="width: 60%;"></div></div>
+                                        </div>
+                                        <div class="poke-card">
+                                            <div class="poke-avatar">🌿</div>
+                                            <div class="poke-info">
+                                                <span class="poke-name">Venusaur</span>
+                                                <span class="poke-lvl">Nv. 47</span>
+                                            </div>
+                                            <div class="poke-hp-bar"><div class="poke-hp-fill" style="width: 40%;"></div></div>
+                                        </div>
+                                    </div>
+                                    <h3 class="poke-section-title">⚔️ Acciones Rápidas</h3>
+                                    <div class="poke-actions">
+                                        <button class="poke-action-btn">🎒 Inventario</button>
+                                        <button class="poke-action-btn">📜 Misiones</button>
+                                    </div>
+                                </main>
+                                <nav class="poke-nav">
+                                    <div class="poke-nav-item active">
+                                        <span class="poke-nav-icon">🏠</span>
+                                        <small>Inicio</small>
+                                    </div>
+                                    <div class="poke-nav-item">
+                                        <span class="poke-nav-icon">📦</span>
+                                        <small>Items</small>
+                                    </div>
+                                    <div class="poke-nav-item">
+                                        <span class="poke-nav-icon">🗺️</span>
+                                        <small>Mapa</small>
+                                    </div>
+                                    <div class="poke-nav-item">
+                                        <span class="poke-nav-icon">⚙️</span>
+                                        <small>Config</small>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="video-pokednd">
+                            <div class="video-container">
+                                <video controls preload="metadata" poster="images/poster-pokednd.jpg">
+                                    <source src="videos/poke-dnd/demo.mp4" type="video/mp4">
+                                    <p data-i18n="projects.video.fallback">Tu navegador no soporta video HTML5.</p>
+                                </video>
+                                <div class="video-placeholder">
+                                    <span class="placeholder-icon">🎬</span>
+                                    <p data-i18n="projects.video.placeholder">Video de demostración próximamente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="experience.title">Experiencia Laboral</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Abr 2025 - Ago 2025</span>
+                            <h3 class="timeline-title" data-i18n="experience.labonc.title">Desarrollador de Software</h3>
+                            <h4 class="timeline-company">Laboratorio Dental Olga Núñez Castillo</h4>
+                            <ul class="timeline-details">
+                                <li data-i18n="experience.labonc.d1">Desarrollo de aplicación de escritorio con Tauri y React</li>
+                                <li data-i18n="experience.labonc.d2">Migración de sistema legado MS Access a arquitectura moderna</li>
+                                <li data-i18n="experience.labonc.d3">Implementación de base de datos SQLite y generación de reportes PDF</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Ene 2025 - Mar 2025</span>
+                            <h3 class="timeline-title" data-i18n="experience.odontoline.title">Desarrollador de Aplicaciones</h3>
+                            <h4 class="timeline-company">Clínica Dental Odontoline</h4>
+                            <ul class="timeline-details">
+                                <li data-i18n="experience.odontoline.d1">Desarrollo del frontend con Expo (React Native)</li>
+                                <li data-i18n="experience.odontoline.d2">Implementación del backend con Flask y Supabase</li>
+                                <li data-i18n="experience.odontoline.d3">Creación de notificaciones automáticas y gestión de base de datos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Mar 2023 - Feb 2024</span>
+                            <h3 class="timeline-title" data-i18n="experience.teleperformance.title">Intérprete</h3>
+                            <h4 class="timeline-company">Teleperformance Chile S.A.</h4>
+                            <ul class="timeline-details">
+                                <li data-i18n="experience.teleperformance.d1">Interpretación simultánea de llamadas internacionales</li>
+                                <li data-i18n="experience.teleperformance.d2">Altos estándares de precisión, confidencialidad y calidad</li>
+                                <li data-i18n="experience.teleperformance.d3">Colaboración con supervisores para optimizar eficiencia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section education">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="education.title">Educación</h2>
+                
+                <div class="education-grid">
+                    <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="education-icon">🎓</div>
+                        <div class="education-info">
+                            <h3 data-i18n="education.degree">Ingeniero en Computación</h3>
+                            <h4>Universidad de La Serena</h4>
+                            <p class="education-date">Mar 2016 - Abr 2025</p>
+                            <span class="education-badge" data-i18n="education.status">Titulado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="education-icon">🌐</div>
+                        <div class="education-info">
+                            <h3 data-i18n="education.languages">Idiomas</h3>
+                            <div class="language-list">
+                                <div class="language-item">
+                                    <span data-i18n="education.spanish">Español</span>
+                                    <span class="language-level" data-i18n="education.native">Nativo</span>
+                                </div>
+                                <div class="language-item">
+                                    <span data-i18n="education.english">Inglés</span>
+                                    <span class="language-level" data-i18n="education.advanced">Avanzado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="contact.title">Contacto</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-i18n="contact.subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                
+                <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-methods">
+                        <a href="mailto:vmaldonadog97@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Email</h4>
+                                <span>vmaldonadog97@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="http://www.linkedin.com/in/victormg-dev" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info">
+                                <h4>LinkedIn</h4>
+                                <span>victormg-dev</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="currentYear"></span> Víctor Maldonado García. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+            <p class="footer-tagline" data-i18n="footer.tagline">Diseñado y desarrollado con ❤️ desde La Serena, Chile</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
