@@ -82,12 +82,12 @@ portafolio/
 - **Poster**: Captura del dashboard principal
 
 #### 2. Odontoline (`videos/odontoline/demo.mp4`)
-- **Contenido sugerido**: Login, navegación por agenda, visualización de citas, notificación
+- **Contenido**: Login, navegación por agenda, visualización de citas, notificación
 - **Duración**: 21 segundos
 - **Poster**: Captura de pantalla del login o agenda
 
 #### 3. Pokémon D&D (`videos/poke-dnd/demo.mp4`)
-- **Contenido sugerido**: Dashboard del entrenador, gestión de equipo, ver equipo
+- **Contenido**: Dashboard del entrenador, gestión de equipo, ver equipo
 - **Duración**: 90 segundos
 - **Poster**: Captura del dashboard con equipo visible
 

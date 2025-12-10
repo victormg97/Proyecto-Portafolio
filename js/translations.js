@@ -12,6 +12,7 @@ const translations = {
             projects: "Proyectos",
             experience: "Experiencia",
             education: "Educación",
+            resume: "Currículum",
             contact: "Contacto"
         },
         
@@ -123,6 +124,15 @@ const translations = {
             advanced: "Avanzado"
         },
         
+        // Resume
+        resume: {
+            title: "Currículum",
+            subtitle: "Descarga mi currículum profesional en el idioma de tu preferencia.",
+            spanish: "Español",
+            english: "English",
+            view: "Ver PDF →"
+        },
+        
         // Contact
         contact: {
             title: "Contacto",
@@ -151,6 +161,7 @@ const translations = {
             projects: "Projects",
             experience: "Experience",
             education: "Education",
+            resume: "Resume",
             contact: "Contact"
         },
         
@@ -260,6 +271,15 @@ const translations = {
             native: "Native",
             english: "English",
             advanced: "Advanced"
+        },
+        
+        // Resume
+        resume: {
+            title: "Resume",
+            subtitle: "Download my professional resume in your preferred language.",
+            spanish: "Español",
+            english: "English",
+            view: "View PDF →"
         },
         
         // Contact

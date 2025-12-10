@@ -3,6 +3,24 @@
    =========================================================== */
 
 /* ===========================================================
+   GLOBAL RESPONSIVE FIXES
+   =========================================================== */
+/* Prevent horizontal scroll on all devices */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(var(--container-padding), env(safe-area-inset-left));
+        padding-right: max(var(--container-padding), env(safe-area-inset-right));
+    }
+}
+
+/* ===========================================================
    MOBILE BASE (< 640px)
    =========================================================== */
 
@@ -159,6 +177,23 @@
     text-align: center;
 }
 
+/* Resume Mobile */
+.resume-cards {
+    grid-template-columns: 1fr;
+}
+
+.resume-card {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.resume-flag {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+}
+
 /* Cookie Banner Mobile */
 .cookie-content {
     flex-direction: column;
@@ -226,6 +261,19 @@
     .contact-card {
         flex-direction: row;
         text-align: left;
+    }
+    
+    /* Resume Tablet */
+    .resume-card {
+        flex-direction: row;
+        text-align: left;
+        padding: var(--spacing-xl);
+    }
+    
+    .resume-flag {
+        position: relative;
+        top: auto;
+        right: auto;
     }
     
     /* Cookie Banner Tablet */
