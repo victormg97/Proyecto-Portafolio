@@ -76,7 +76,7 @@ input, textarea {
 .section {
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow: clip;
 }
 
 .sr-only {
@@ -617,6 +617,7 @@ input, textarea {
     padding: var(--spacing-2xl);
     margin-bottom: var(--spacing-2xl);
     transition: all 0.3s ease;
+    overflow: clip;
 }
 
 .project-card:hover {
@@ -750,6 +751,31 @@ input, textarea {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Fix AOS animation scroll issues */
+[data-aos] {
+    overflow: clip;
+}
+
+/* Prevent AOS from causing overflow during animation */
+[data-aos]:not(.aos-animate) {
+    overflow: clip !important;
+}
+
+/* Ensure animated elements don't cause parent overflow */
+.about-content,
+.tech-categories,
+.timeline,
+.education-grid,
+.resume-content,
+.contact-content {
+    overflow: clip;
+}
+
+/* Global fix for AOS container overflow */
+.container {
+    overflow: clip;
 }
 
 /* Video Container */

@@ -25,6 +25,14 @@ const translations = {
             cta: {
                 projects: "Ver Proyectos",
                 contact: "Contactar"
+            },
+            code: {
+                name: "nombre",
+                role: "rol",
+                roleValue: "\"Desarrollador Full Stack\"",
+                skills: "habilidades",
+                passion: "pasion",
+                passionValue: "\"Crear soluciones útiles\""
             }
         },
         
@@ -174,6 +182,14 @@ const translations = {
             cta: {
                 projects: "View Projects",
                 contact: "Get in Touch"
+            },
+            code: {
+                name: "name",
+                role: "role",
+                roleValue: "\"Full Stack Developer\"",
+                skills: "skills",
+                passion: "passion",
+                passionValue: "\"Creating useful solutions\""
             }
         },
         

@@ -12,6 +12,11 @@ html, body {
     width: 100%;
 }
 
+/* Main content wrapper - prevent internal scrollbars */
+main {
+    overflow: clip;
+}
+
 /* Reduce container padding on small mobile screens */
 .container {
     padding-left: 1rem;
@@ -28,13 +33,38 @@ html, body {
 
 /* Ensure hero section doesn't overflow */
 .hero {
-    overflow-x: hidden;
+    overflow: clip;
     width: 100%;
+}
+
+/* Fix AOS animation scroll issues on all devices */
+[data-aos] {
+    overflow: clip;
+}
+
+/* Prevent sections from having internal scroll during animations */
+.section,
+.project-card,
+.timeline-item,
+.education-card,
+.tech-category {
+    overflow: clip;
 }
 
 /* ===========================================================
    MOBILE BASE (< 640px)
    =========================================================== */
+
+/* Mobile overflow fixes */
+.about,
+.tech,
+.projects,
+.experience,
+.education,
+.resume,
+.contact {
+    overflow: clip;
+}
 
 /* Navigation Mobile */
 .nav-menu {
